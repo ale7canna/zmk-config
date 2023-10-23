@@ -83,7 +83,7 @@
 
                 // _BASE 0
                 default_layer {
-                        label = "Arialdo";
+                        label = "ales.cani";
 // ------------------------------------------------------`   '-------------------------------------------------------
 // |      |  Q       |  W     |  E/GUI  |  R       |  T  |   |  Y  |  U        |  I/GUI   |  O      |  P    |      |
 // |      |  A/CURS  |  S/ALT |  D/CTRL |  F/SHIFT |  G  |   |  H  |  J/SHIFT  |  K/CTRL  |  L/ALT  |  ;/CO |      |
