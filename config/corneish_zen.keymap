@@ -62,12 +62,12 @@
 #define MY_A       &lt _CURS A
 #define MY_SEMI    &lt _CO SEMI
 #define MY_SPC     &lt _NUM SPC
-#define MY_SPACE   &lt _NUM SPACE
-#define MY_RET     &lt _NUM RET
+#define MY_SPACE   &lt _FUNL SPACE
+#define MY_RET     &lt _FUNL RET
 
 
-#define MY_DEL  &lt _FUNL DEL
-#define MY_BSPC  &lt _SYMB BSPC
+#define MY_DEL  &lt _NUM DEL
+#define MY_BSPC  &lt _NUM BSPC
 #define MY_TAB  &lt _BLUETOOTH TAB
 
 
