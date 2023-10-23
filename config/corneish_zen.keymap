@@ -88,19 +88,19 @@
 // |      |  Q       |  W     |  E/GUI  |  R       |  T  |   |  Y  |  U        |  I/GUI   |  O      |  P    |      |
 // |      |  A/CURS  |  S/ALT |  D/CTRL |  F/SHIFT |  G  |   |  H  |  J/SHIFT  |  K/CTRL  |  L/ALT  |  ;/CO |      |
 // |      |  Z       |  X     |  C      |  V       |  B  |   |  N  |  M        |          |  .      |  /    |      |
-//                  | Bluetooth   | BSPC/SYMB | SPACE |       | ENT | DEL/FUNL  |     |
+//                   | Bluetooth   | BSPC/SYMB | SPACE |       | ENT | DEL/FUNL  | ESC |
 
                         bindings = <
    &trans  &kp Q  &kp W  MY_E         &kp R  &kp T      &kp Y  &kp U    MY_I            &kp O    &kp P      &trans
    &trans  MY_A   MY_S   MY_D         MY_F   &kp G      &kp H  MY_J     MY_K            MY_L     MY_SEMI    &trans
    &trans  &kp Z  &kp X  &kp C        &kp V  &kp B      &kp N  &kp M    &kp COMMA       &kp DOT  &kp FSLH   &trans
-                      &mo _BLUETOOTH        MY_BSPC    MY_RET  MY_SPACE   MY_DEL  &trans
+                      &mo _BLUETOOTH        MY_BSPC    MY_SPACE  MY_RET   MY_DEL  &kp ESC
                         >;
                 };
 
                 // _CURS 1
                 cursors_layer {
-                        label = "Arialdo";
+                        label = "ales.cani";
 // ------------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     | Home |   ^  | End | Ins |      |
 // |      |     |     |     |     |     |   |     | <--  | Down | --> |  '  |      |
@@ -118,7 +118,7 @@
 
                 // _CO = 2
                 co_layer {
-                        label = "Arialdo";
+                        label = "ales.cani";
 
 // ------------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |      |      |     |     |      |
@@ -136,16 +136,16 @@
 
                 // _NUM = 3
                 numbers_layer {
-                        label = "Arialdo";
+                        label = "ales.cani";
 
 // ------------------------------------------------------------------------------------------
-// |      |  !  |  @  |  #  |  $  |  %  |   |     |  -   |  =   |  +  |  *  |      |
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8   |  9  |  0  |      |
+// |      |  !  |  @  |  #  |  $  |  %  |   |     |  -   |  =   |  +  |  *  |      |
 // |      |  ^  |  &  |     |     |     |   |     |      |      |     |     |      |
 //                    |     |     |     |   |     |      |      |
                         bindings = <
-   &trans     &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PERCENT    &trans   &kp MINUS   &kp EQUAL   &kp PLUS  &kp STAR   &trans
    &trans     &kp N1       MY_2         MY_3         MY_4         &kp N5         &kp N6   MY_7        MY_8        MY_9    &kp N0     &trans
+   &trans     &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PERCENT    &trans   &kp MINUS   &kp EQUAL   &kp PLUS  &kp STAR   &trans
    &trans     &kp CARET    &kp AMPS     &trans       &trans       &trans         &trans   &trans      &trans      &trans    &trans     &trans
                           	            &trans     &trans        &trans             &trans    &trans     &trans
                         >;
@@ -172,7 +172,7 @@
 
                 // _FUNCTION = 5
                 function_layer {
-                        label = "Arialdo";
+                        label = "ales.cani";
 
 // ------------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |      |      |     |     |      |
@@ -180,9 +180,9 @@
 // |      | F11 | F12 | F14 | F15 | F16 |   | F17 | F18  |  F19 | F20 | F20 |      |
 //                    |     | Esc |     |   |     |      |      |
                         bindings = <
-   &trans     &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans   &trans   &trans   &trans
    &trans     &kp F1       MY_F2        MY_F3        MY_F4        &kp F5         &kp F6   MY_F7    MY_F8    MY_F9    &kp F10  &trans
-   &trans     &kp F11      &kp F12      &kp F13      &kp F14      &kp F15        &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &trans
+   &trans     &kp F11      &kp F12      &kp F13      &kp F14      &kp F15        &kp F16  &kp F17  &kp F18  &kp F19  &kp F12  &trans
+   &trans     &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans   &trans   &trans   &trans
                           	                  &trans    &kp ESC     &trans      &trans  &trans   &trans
                         >;
                 };
@@ -192,7 +192,7 @@
 
                 // _SYMB = 6
                 symbols_layer {
-                        label = "Arialdo";
+                        label = "ales.cani";
 
 // ------------------------------------------------------------------------------------------
 // |      |     |     |  <  |     |     |   |     |  _   |  >   |  ~  |  |  |      |
