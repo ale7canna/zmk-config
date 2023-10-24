@@ -70,6 +70,10 @@
 #define MY_BSPC  &lt _NUM BSPC
 #define MY_TAB  &lt _BLUETOOTH TAB
 
+#define MY_G  &mt LMETA G
+#define MY_H  &mt LMETA H
+
+
 
 &mt {
     flavor = "tap-preferred";
@@ -87,13 +91,13 @@
                         label = "ales.cani";
 // ------------------------------------------------------`   '-------------------------------------------------------
 // |      |  Q       |  W     |  E/GUI  |  R       |  T  |   |  Y  |  U        |  I/GUI   |  O      |  P    |      |
-// |      |  A/CURS  |  S/ALT |  D/CTRL |  F/SHIFT |  G  |   |  H  |  J/SHIFT  |  K/CTRL  |  L/ALT  |  ;/CO |      |
+// |      |  A/CURS  |  S/ALT |  D/CTRL |  F/SHIFT |MET/G|   |MET/H|  J/SHIFT  |  K/CTRL  |  L/ALT  |  ;/CO |      |
 // |      |  Z       |  X     |  C      |  V       |  B  |   |  N  |  M        |          |  .      |  /    |      |
 //                   | TAB/BT      | BSPC/SYMB | SPACE |       | ENT | DEL/FUNL  | ESC |
 
                         bindings = <
    &trans  &kp Q  &kp W  MY_E         &kp R  &kp T      &kp Y  &kp U    MY_I            &kp O    &kp P      &trans
-   &trans  MY_A   MY_S   MY_D         MY_F   &kp G      &kp H  MY_J     MY_K            MY_L     MY_SEMI    &trans
+   &trans  MY_A   MY_S   MY_D         MY_F   MY_G       MY_H  MY_J     MY_K            MY_L     MY_SEMI    &trans
    &trans  &kp Z  &kp X  &kp C        &kp V  &kp B      &kp N  &kp M    &kp COMMA       &kp DOT  &kp FSLH   &trans
                       MY_TAB        MY_BSPC    MY_SPACE  MY_RET   MY_DEL  &kp ESC
                         >;
