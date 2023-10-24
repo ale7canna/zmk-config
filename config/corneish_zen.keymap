@@ -13,13 +13,13 @@
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
-    //zmk,matrix_transform = &five_column_transform;
+    //zmk,matrix_transform = &five_USEFULLlumn_transform;
   };
 };
 
 #define _BASE       0  // base keyboard
 #define _CURS       1  // cursors
-#define _CO         2  // a layer complementar to _CURS
+#define _USEFULL         2  // a layer complementar to _CURS
 #define _NUM        3  // numbers and operations
 #define _BLUETOOTH  4  // layer to manage blue tooth connection
 #define _FUNL       5  // Function keys
@@ -60,7 +60,7 @@
 #define MY_I       &mt RGUI I
 
 #define MY_A       &lt _CURS A
-#define MY_SEMI    &lt _CO SEMI
+#define MY_SEMI    &lt _USEFULL SEMI
 #define MY_SPC     &lt _NUM SPC
 #define MY_SPACE   &lt _FUNL SPACE
 #define MY_RET     &lt _FUNL RET
@@ -68,11 +68,13 @@
 
 #define MY_DEL  &lt _NUM DEL
 #define MY_BSPC  &lt _NUM BSPC
-#define MY_TAB  &lt _BLUETOOTH TAB
+#define MY_TAB  &lt _USEFULL TAB
+#define MY_ESC  &lt _USEFULL ESC
 
 #define MY_G  &mt LMETA G
 #define MY_H  &mt LMETA H
 
+#define MY_FSLH &lt _BLUETOOTH FSLH
 
 
 &mt {
@@ -92,14 +94,14 @@
 // ------------------------------------------------------`   '-------------------------------------------------------
 // |      |  Q       |  W     |  E/GUI  |  R       |  T  |   |  Y  |  U        |  I/GUI   |  O      |  P    |      |
 // |      |  A/CURS  |  S/ALT |  D/CTRL |  F/SHIFT |MET/G|   |MET/H|  J/SHIFT  |  K/CTRL  |  L/ALT  |  ;/CO |      |
-// |      |  Z       |  X     |  C      |  V       |  B  |   |  N  |  M        |          |  .      |  /    |      |
+// |      |  Z       |  X     |  C      |  V       |  B  |   |  N  |  M        |          |  .      |  BT//    |      |
 //                   | TAB/BT      | BSPC/SYMB | SPACE |       | ENT | DEL/FUNL  | ESC |
 
                         bindings = <
    &trans  &kp Q  &kp W  MY_E         &kp R  &kp T      &kp Y  &kp U    MY_I            &kp O    &kp P      &trans
    &trans  MY_A   MY_S   MY_D         MY_F   MY_G       MY_H  MY_J     MY_K            MY_L     MY_SEMI    &trans
-   &trans  &kp Z  &kp X  &kp C        &kp V  &kp B      &kp N  &kp M    &kp COMMA       &kp DOT  &kp FSLH   &trans
-                      MY_TAB        MY_BSPC    MY_SPACE  MY_RET   MY_DEL  &kp ESC
+   &trans  &kp Z  &kp X  &kp C        &kp V  &kp B      &kp N  &kp M    &kp COMMA       &kp DOT  MY_FSLH   &trans
+                      MY_TAB        MY_BSPC    MY_SPACE  MY_RET   MY_DEL  MY_ESC
                         >;
                 };
 
@@ -121,20 +123,20 @@
 
 
 
-                // _CO = 2
+                // _USEFULL = 2
                 co_layer {
                         label = "ales.cani";
 
 // ------------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |      |      |     |     |      |
-// |  `   |     |     |     |     |     |   |     |      |      |     |     |      |
-// |      |     |     |     |     |     |   |     |      |      |     |     |      |
-//                    |     |     |     |   |     |      |      |
+// | TAB  |     |     |     |     |     |   |     |      |      |     |  `  |      |
+// | ESC  |     |     |     |     |     |   |     |      |      |     |  '  |      |
+// | BKSP |     |     |     |     |     |   |     |      |      |     | DEL |      |
+//                    |  +  |     |  `  |   |  `  |      |  -   |
                         bindings = <
-   &trans     &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-   &trans     &kp GRAVE    &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-   &trans     &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &trans     &trans       &trans      &trans  &trans   &trans
+   &trans     &kp TAB      &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &kp GRAVE        &trans
+   &trans     &kp ESC      &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &kp SINGLE_QUOTE &trans
+   &trans     &kp BKSP     &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &kp DEL          &trans
+                          	        &kp PLUS     &trans       &kp GRAVE      &kp GRAVE  &trans   &kp MINUS
                         >;
                 };
 
